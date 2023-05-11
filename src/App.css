@@ -26,9 +26,12 @@ p {
 }
 
 .link {
+  border: none;
   text-decoration: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 0.9em;
   color: rgba(0, 0, 0, 0.562);
-  font-weight: 500;
 }
 
 .header {
@@ -86,13 +89,6 @@ p {
   font-weight: 500;
   padding: 0.5em;
   width: 60%;
-}
-
-.link {
-  border: none;
-  background-color: transparent;
-  font-weight: 700;
-  font-size: 0.9em;
 }
 
 .remove {
