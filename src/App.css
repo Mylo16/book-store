@@ -67,10 +67,52 @@ p {
 
 .card-col3 {
   width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .features {
   display: flex;
   gap: 1em;
   padding-inline-start: 0%;
+}
+
+.update {
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  padding: 0.5em;
+  width: 60%;
+}
+
+.link {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.remove {
+  border-right: solid 1px rgba(0, 0, 0, 0.267);
+  border-left: solid 1px rgba(0, 0, 0, 0.267);
+  padding: 0 2em;
+}
+
+/***** ADD BOOK *****/
+.add-book {
+  margin-bottom: 2em;
+}
+
+form {
+  display: flex;
+  gap: 1em;
+}
+
+form button {
+  background-color: blue;
+  color: white;
+  padding: 0.5em;
 }
