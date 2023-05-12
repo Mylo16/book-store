@@ -1,11 +1,11 @@
 import AddBook from './addNewBook';
-import Books from './books';
+import BookCards from './bookCards';
 
 export default function Home() {
   return (
     <>
       <div className="books">
-        <Books />
+        <BookCards />
         <AddBook />
       </div>
     </>
