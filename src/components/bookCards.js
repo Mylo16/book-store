@@ -1,10 +1,25 @@
 import '../App.css';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/bookSlice';
+import { fetchBooks, removeBook } from '../redux/books/bookSlice';
 
 export default function BookCards() {
   const dispatch = useDispatch();
-  const books = useSelector((store) => store.book.books);
+  const { books, isLoading, error } = useSelector((store) => store.book);
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (isLoading) {
+    return (
+      <div>Loading...</div>
+    );
+  }
+  if (error) {
+    return (
+      <div>Error: Failed to reach data</div>
+    );
+  }
   return (
     <>
       <div className="bks">

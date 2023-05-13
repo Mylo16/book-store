@@ -3,7 +3,11 @@ import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/bookSlice';
 
 const AddBook = () => {
-  const [value, setValue] = useState({});
+  const [value, setValue] = useState({
+    item_id: '',
+    author: '',
+    category: '',
+  });
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -11,6 +15,7 @@ const AddBook = () => {
     setValue((prev) => ({
       ...prev,
       [name]: value,
+      category: 'Science Fiction',
       item_id: crypto.randomUUID(),
     }));
   };
