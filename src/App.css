@@ -72,7 +72,7 @@ h2 {
 
 .category,
 .author {
-  color: #1e51dcab;
+  color: #0290ff;
 }
 
 .card-col2 {
@@ -96,7 +96,7 @@ h2 {
 }
 
 .update {
-  background-color: blue;
+  background-color: #0290ff;
   border: none;
   border-radius: 10px;
   color: white;
@@ -163,7 +163,7 @@ h2 {
   text-align: center;
   margin-top: 10px;
   margin-left: 10px;
-  color: #1e51dc;
+  color: #0290ff;
   position: absolute;
   z-index: 100;
   font-weight: 700;
@@ -197,7 +197,7 @@ form {
 }
 
 form button {
-  background-color: blue;
+  background-color: #0290ff;
   color: white;
   padding: 1em;
   border: none;
