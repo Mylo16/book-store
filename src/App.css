@@ -9,6 +9,11 @@ p {
   font-weight: 500;
 }
 
+h1,
+h2 {
+  color: rgba(0, 0, 0, 0.795);
+}
+
 /***** NAVIGATION *****/
 
 .navbar {
@@ -49,6 +54,7 @@ p {
 
 .book-container {
   display: flex;
+  align-items: center;
   border-radius: 10px;
   box-shadow: -1px 1px 9px -3px rgba(0, 0, 0, 0.81);
   margin-bottom: 2em;
@@ -64,8 +70,16 @@ p {
   width: 60%;
 }
 
+.category,
+.author {
+  color: #0290ff;
+}
+
 .card-col2 {
   width: 20%;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
 
 .card-col3 {
@@ -82,7 +96,7 @@ p {
 }
 
 .update {
-  background-color: blue;
+  background-color: #0290ff;
   border: none;
   border-radius: 10px;
   color: white;
@@ -97,6 +111,65 @@ p {
   padding: 0 2em;
 }
 
+/***** PROGRESS BAR STYLING *****/
+
+.circle-wrap {
+  width: 120px;
+  height: 120px;
+  background: #fefcff;
+  border-radius: 50%;
+  border: 1px solid #cdcbd0;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+.mask .fill {
+  clip: rect(0, 60px, 120px, 0);
+  background-color: #227ded;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0, 120px, 120px, 60px);
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+.circle-wrap .inside-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #d2eaf1;
+  line-height: 100px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #0290ff;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
 /***** ADD BOOK *****/
 .add-book {
   margin-bottom: 2em;
@@ -107,8 +180,27 @@ form {
   gap: 1em;
 }
 
-form button {
-  background-color: blue;
-  color: white;
+.author-input {
+  width: 20em;
+  border: 1px solid rgba(0, 0, 0, 0.37);
   padding: 0.5em;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+.title-input {
+  width: 40em;
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+form button {
+  background-color: #0290ff;
+  color: white;
+  padding: 1em;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
 }

@@ -34,6 +34,7 @@ const AddBook = () => {
           value={value.title || ''}
           type="text"
           name="title"
+          className="title-input"
           required
           placeholder="Enter book title"
           onChange={handleChange}
@@ -43,6 +44,7 @@ const AddBook = () => {
           value={value.author || ''}
           type="text"
           name="author"
+          className="author-input"
           placeholder="Enter Author"
           required
           onChange={handleChange}

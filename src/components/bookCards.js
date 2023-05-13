@@ -27,9 +27,9 @@ export default function BookCards() {
           books.map((book) => (
             <div key={book.item_id} className="book-container">
               <div className="card-col1">
-                <p>{book.category}</p>
+                <p className="category">{book.category}</p>
                 <h1>{book.title}</h1>
-                <p>{book.author}</p>
+                <p className="author">{book.author}</p>
                 <ul className="features">
                   <li className="feature"><button type="button" className="link">Comments</button></li>
                   <li className="feature"><button type="button" onClick={() => dispatch(removeBook(book.item_id))} className="link remove">Remove</button></li>
@@ -37,9 +37,18 @@ export default function BookCards() {
                 </ul>
               </div>
               <div className="card-col2">
-                <div className="progress" />
+                <div className="circle-wrap">
+                  <div className="circle">
+                    <div className="mask full">
+                      <div className="fill" />
+                    </div>
+                    <div className="mask half">
+                      <div className="fill" />
+                    </div>
+                    <div className="inside-circle">75%</div>
+                  </div>
+                </div>
                 <div className="progress-info">
-                  <p>80%</p>
                   <p>Completed</p>
                 </div>
               </div>
