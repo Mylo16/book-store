@@ -121,6 +121,17 @@ h2 {
   border: 1px solid #cdcbd0;
 }
 
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+.mask .fill {
+  clip: rect(0, 60px, 120px, 0);
+  background-color: #227ded;
+}
+
 .circle-wrap .circle .mask,
 .circle-wrap .circle .fill {
   width: 120px;
@@ -129,25 +140,15 @@ h2 {
   border-radius: 50%;
 }
 
-.mask .fill {
-  clip: rect(0px, 60px, 120px, 0px);
-  background-color: #227ded;
-}
-
 .circle-wrap .circle .mask {
-  clip: rect(0px, 120px, 120px, 60px);
+  clip: rect(0, 120px, 120px, 60px);
 }
 
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 3s;
-  transform: rotate(135deg);
-}
-
-@keyframes fill{
+@keyframes fill {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(135deg);
   }
